@@ -576,6 +576,141 @@ a:hover {
   margin-bottom: 0.25rem;
 }
 
+/* Home page photo mosaic */
+.photo-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+  align-items: start;
+}
+
+.mosaic-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #fff;
+  padding: 8px 8px 36px 8px;
+  border-radius: 2px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mosaic-img:hover {
+  transform: scale(1.04) rotate(0deg) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+  position: relative;
+  z-index: 1;
+}
+
+.mosaic-img.wide {
+  grid-column: span 2;
+}
+
+.mosaic-img.tilt-l  { transform: rotate(-2.5deg); }
+.mosaic-img.tilt-r  { transform: rotate(2deg); }
+.mosaic-img.tilt-ll { transform: rotate(-1.5deg); }
+.mosaic-img.tilt-rr { transform: rotate(3deg); }
+
+@media (max-width: 600px) {
+  .photo-mosaic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mosaic-img.wide {
+    grid-column: span 2;
+  }
+}
+
+/* Hero image inside interest cards */
+.interest-hero-img {
+  width: 100%;
+  height: 560px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  background: #edf2f7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+/* Gallery link button */
+.gallery-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.gallery-link:hover {
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+/* Gallery page grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-grid-img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+  background: #edf2f7;
+  transition: transform 0.2s ease;
+}
+
+.gallery-grid-img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive video embed wrapper */
+.video-embed-section {
+  margin-top: 2rem;
+}
+
+.video-embed-section h2 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.video-embed-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.video-embed-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Back navigation link on gallery pages */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
 /* Footer */
 .site-footer {
   background: var(--primary-color);
