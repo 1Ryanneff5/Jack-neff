@@ -49,10 +49,6 @@ a:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
-.logo-mark {
-  display: none;
-}
-
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -70,17 +66,7 @@ a:hover {
 }
 
 .logo-mark {
-  width: 60px;
-  height: 60px;
-  background: var(--primary-color);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  border-radius: 8px;
+  display: none;
 }
 
 .logo-text {
