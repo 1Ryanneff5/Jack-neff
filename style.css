@@ -7,6 +7,8 @@
   --primary-color: #1a365d;
   --secondary-color: #2c5282;
   --accent-color: #c53030;
+  --gold: #c9a227;
+  --gold-light: #fdf8e8;
   --text-color: #2d3748;
   --light-bg: #f7fafc;
   --white: #ffffff;
@@ -42,9 +44,13 @@ a:hover {
 /* Header */
 .site-header {
   background: var(--white);
-  border-bottom: 3px solid var(--primary-color);
+  border-bottom: 3px solid var(--gold);
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.logo-mark {
+  display: none;
 }
 
 .header-inner {
@@ -92,7 +98,9 @@ a:hover {
 
 .logo-sub {
   font-size: 0.85rem;
-  color: var(--secondary-color);
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .primary-nav ul {
@@ -104,34 +112,42 @@ a:hover {
 
 .primary-nav a {
   color: var(--text-color);
-  font-weight: 500;
-  padding: 0.5rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
   border-radius: 4px;
   transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .primary-nav a:hover {
-  color: var(--primary-color);
-  background: var(--light-bg);
+  color: var(--gold);
+  background: var(--primary-color);
 }
 
 /* Hero Banner */
 .hero-banner {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, #0f2340 0%, var(--primary-color) 50%, var(--secondary-color) 100%);
   padding: 4rem 2rem;
   text-align: center;
   color: var(--white);
+  border-bottom: 4px solid var(--gold);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .hero-content h1 {
   font-family: var(--font-heading);
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  letter-spacing: 1px;
 }
 
 .hero-tagline {
   font-size: 1.25rem;
-  opacity: 0.9;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 /* Main Content Layout */
@@ -155,7 +171,7 @@ a:hover {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--gold);
 }
 
 /* Gallery images — height-based so full image always shows */
@@ -220,7 +236,7 @@ a:hover {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--gold);
 }
 
 /* Profile Section */
@@ -281,7 +297,7 @@ a:hover {
   color: var(--primary-color);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--gold);
 }
 
 /* Interest Grid */
@@ -296,12 +312,13 @@ a:hover {
   background: var(--light-bg);
   padding: 1.5rem;
   border-radius: 8px;
-  border-left: 4px solid var(--primary-color);
+  border-left: 4px solid var(--gold);
 }
 
 .interest-card h3 {
   font-family: var(--font-heading);
   color: var(--primary-color);
+  font-size: 1.9rem;
   margin-bottom: 0.75rem;
 }
 
@@ -344,9 +361,9 @@ a:hover {
 }
 
 .favorite-links a:hover {
-  background: var(--primary-color);
+  background: var(--gold);
   color: var(--white);
-  border-color: var(--primary-color);
+  border-color: var(--gold);
 }
 
 /* Hobby List */
@@ -366,7 +383,7 @@ a:hover {
   content: "★";
   position: absolute;
   left: 0;
-  color: var(--primary-color);
+  color: var(--gold);
 }
 
 /* Goals Container */
@@ -391,8 +408,8 @@ a:hover {
 }
 
 .goal-card.college {
-  border-left: 4px solid var(--accent-color);
-  background: #fff5f5;
+  border-left: 4px solid var(--gold);
+  background: var(--gold-light);
 }
 
 .goal-card h3 {
@@ -416,7 +433,7 @@ a:hover {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--primary-color);
+  color: var(--gold);
   font-weight: bold;
 }
 
@@ -436,6 +453,7 @@ a:hover {
   background: var(--light-bg);
   padding: 1.5rem;
   border-radius: 8px;
+  border-left: 4px solid var(--gold);
 }
 
 .schedule-block h3 {
@@ -488,7 +506,7 @@ a:hover {
   color: var(--primary-color);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--gold);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -637,7 +655,7 @@ a:hover {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.6rem 1.25rem;
-  background: var(--primary-color);
+  background: var(--gold);
   color: var(--white);
   border-radius: 4px;
   font-weight: 600;
@@ -646,7 +664,7 @@ a:hover {
 }
 
 .gallery-link:hover {
-  background: var(--accent-color);
+  background: var(--primary-color);
   color: var(--white);
 }
 
@@ -680,10 +698,10 @@ a:hover {
 .video-embed-section h2 {
   font-family: var(--font-heading);
   color: var(--primary-color);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--gold);
 }
 
 .video-embed-wrapper {
@@ -709,6 +727,7 @@ a:hover {
   display: inline-block;
   margin-bottom: 1.5rem;
   font-weight: 500;
+  color: var(--gold);
 }
 
 /* Footer */
@@ -718,6 +737,7 @@ a:hover {
   text-align: center;
   padding: 2rem;
   margin-top: 3rem;
+  border-top: 4px solid var(--gold);
 }
 
 .footer-inner p {
@@ -726,7 +746,7 @@ a:hover {
 
 .footer-motto {
   font-style: italic;
-  opacity: 0.9;
+  color: var(--gold);
 }
 
 /* Responsive Design */
